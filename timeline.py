@@ -458,23 +458,23 @@ class TimelineProcessor:
         
     def _export_html(self, events):
         """Export timeline as HTML."""
-        html = """
+        html_template = """
         <!DOCTYPE html>
         <html>
         <head>
             <title>InvestiGUI Timeline Export</title>
             <style>
-                body { font-family: Arial, sans-serif; margin: 20px; }
-                .header { background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-bottom: 20px; }
-                .event { border: 1px solid #ddd; margin: 10px 0; padding: 10px; border-radius: 5px; }
-                .event-header { font-weight: bold; color: #333; }
-                .event-details { margin-top: 5px; color: #666; }
-                .timestamp { color: #007acc; }
-                .type { color: #28a745; }
-                .source { color: #6f42c1; }
-                .level-ERROR { border-left: 4px solid #dc3545; }
-                .level-WARNING { border-left: 4px solid #ffc107; }
-                .level-INFO { border-left: 4px solid #007bff; }
+                body {{ font-family: Arial, sans-serif; margin: 20px; }}
+                .header {{ background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-bottom: 20px; }}
+                .event {{ border: 1px solid #ddd; margin: 10px 0; padding: 10px; border-radius: 5px; }}
+                .event-header {{ font-weight: bold; color: #333; }}
+                .event-details {{ margin-top: 5px; color: #666; }}
+                .timestamp {{ color: #007acc; }}
+                .type {{ color: #28a745; }}
+                .source {{ color: #6f42c1; }}
+                .level-ERROR {{ border-left: 4px solid #dc3545; }}
+                .level-WARNING {{ border-left: 4px solid #ffc107; }}
+                .level-INFO {{ border-left: 4px solid #007bff; }}
             </style>
         </head>
         <body>
@@ -488,7 +488,7 @@ class TimelineProcessor:
         for event in events:
             level_class = f"level-{event.get('level', 'INFO')}"
             
-            html += f"""
+            html_template += f"""
             <div class="event {level_class}">
                 <div class="event-header">
                     <span class="timestamp">{event.get('timestamp', 'Unknown')}</span> -
@@ -502,12 +502,12 @@ class TimelineProcessor:
             </div>
             """
             
-        html += """
+        html_template += """
         </body>
         </html>
         """
         
-        return html.format(
+        return html_template.format(
             export_time=datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
             total_events=len(events)
         )

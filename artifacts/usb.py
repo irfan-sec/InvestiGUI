@@ -3,9 +3,15 @@ USB artifacts extraction module
 """
 
 import os
-import winreg
 import json
 from datetime import datetime, timezone
+
+# Windows-specific import, only available on Windows
+try:
+    import winreg
+    WINREG_AVAILABLE = True
+except ImportError:
+    WINREG_AVAILABLE = False
 
 
 class USBArtifacts:
@@ -129,7 +135,7 @@ class USBArtifacts:
         
         try:
             # Only works on Windows
-            if os.name != 'nt':
+            if os.name != 'nt' or not WINREG_AVAILABLE:
                 return artifacts
                 
             import winreg

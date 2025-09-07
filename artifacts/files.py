@@ -5,8 +5,14 @@ File artifacts extraction module
 import os
 from datetime import datetime, timezone
 import json
-import winreg
 import struct
+
+# Windows-specific import, only available on Windows
+try:
+    import winreg
+    WINREG_AVAILABLE = True
+except ImportError:
+    WINREG_AVAILABLE = False
 
 
 class FileArtifacts:
