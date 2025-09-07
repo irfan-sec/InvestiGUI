@@ -1,0 +1,3 @@
+"""
+GUI module for InvestiGUI
+"""
