@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "report_title": "Test Case",
+    "case_number": "CASE-20250914-170135",
+    "investigator": "Digital Forensics Team",
+    "organization": "InvestiGUI Analysis",
+    "report_date": "2025-09-14 17:01:35",
+    "investigation_period": {
+      "start_date": "2025-09-07",
+      "end_date": "2025-09-14"
+    },
+    "evidence_sources": [],
+    "tools_used": [
+      "InvestiGUI v2.0.0",
+      "Timeline Analysis",
+      "Artifact Extraction"
+    ],
+    "classification": "Internal Use"
+  },
+  "executive_summary": {
+    "investigation_overview": "Comprehensive digital forensics analysis of 1 events across multiple data sources.",
+    "key_findings": [],
+    "artifact_summary": [
+      "1 test artifacts extracted"
+    ],
+    "severity_distribution": {
+      "Critical": 0,
+      "High": 0,
+      "Medium": 0,
+      "Low": 0,
+      "Info": 1
+    },
+    "total_events_analyzed": 1,
+    "investigation_timeframe": "2024-12-14 02:30 to 2024-12-14 02:30 (0:00:00)",
+    "risk_assessment": "LOW",
+    "immediate_actions_required": [
+      "Continue monitoring and maintain current security posture"
+    ]
+  },
+  "timeline_analysis": {
+    "temporal_analysis": {
+      "first_event": "2024-12-14T02:30:00",
+      "last_event": "2024-12-14T02:30:00",
+      "time_span": "0:00:00",
+      "events_per_hour": 0.0,
+      "peak_activity_periods": [
+        "2024-12-14 02:00 (1 events)"
+      ]
+    },
+    "event_type_distribution": {
+      "Test Event": 1
+    },
+    "source_distribution": {
+      "Unknown": 1
+    },
+    "correlation_patterns": [],
+    "anomaly_detection": [
+      "Significant after-hours activity detected"
+    ]
+  },
+  "artifact_summary": {
+    "test": {
+      "count": 1,
+      "examples": [
+        {
+          "name": "test_artifact"
+        }
+      ],
+      "notable_findings": []
+    }
+  },
+  "findings": [],
+  "recommendations": [
+    {
+      "category": "Immediate Actions",
+      "priority": "High",
+      "items": [
+        "Review and validate all critical and high-severity events",
+        "Implement additional monitoring on affected systems",
+        "Preserve additional evidence if investigation is ongoing"
+      ]
+    },
+    {
+      "category": "Security Improvements",
+      "priority": "Medium",
+      "items": [
+        "Update security policies based on findings",
+        "Enhance network monitoring capabilities",
+        "Implement additional endpoint protection"
+      ]
+    },
+    {
+      "category": "Future Prevention",
+      "priority": "Medium",
+      "items": [
+        "Regular security assessments",
+        "Enhanced user training programs",
+        "Improved incident response procedures"
+      ]
+    }
+  ],
+  "technical_details": {
+    "test": {
+      "data_source": "test",
+      "extraction_method": "Automated analysis using InvestiGUI",
+      "data_integrity": "Verified using hash validation",
+      "analysis_timestamp": "2025-09-14T17:01:35.577688",
+      "raw_data_summary": "List containing 1 items"
+    }
+  },
+  "charts_data": {
+    "timeline_chart": {
+      "chart_type": "timeline",
+      "data_points": 1,
+      "description": "Timeline of investigation events"
+    },
+    "severity_pie_chart": {
+      "chart_type": "pie",
+      "data": {
+        "Critical": 0,
+        "High": 0,
+        "Medium": 0,
+        "Low": 0,
+        "Info": 1
+      },
+      "description": "Event severity distribution"
+    },
+    "event_type_bar_chart": {
+      "chart_type": "bar",
+      "data": {
+        "Test Event": 1
+      },
+      "description": "Event type distribution"
+    },
+    "temporal_activity_chart": {
+      "chart_type": "line",
+      "data_points": 1,
+      "description": "Activity over time"
+    }
+  },
+  "appendices": {
+    "appendix_test": {
+      "title": "Detailed Test Analysis",
+      "data_summary": "List containing 1 items",
+      "extraction_timestamp": "2025-09-14T17:01:35.577697"
+    }
+  }
+}
