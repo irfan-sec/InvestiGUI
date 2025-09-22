@@ -1,0 +1,93 @@
+# InvestiGUI v3.0.0 - Advanced Requirements
+# World-class digital forensics and cybersecurity investigation platform
+
+# Core Dependencies
+PyQt5>=5.15.0
+python-dateutil>=2.8.2
+psutil>=5.9.0
+numpy>=1.21.0
+setuptools>=40.0.0
+
+# Advanced AI and Machine Learning
+scikit-learn>=1.0.0
+pandas>=1.3.0
+matplotlib>=3.5.0
+networkx>=2.6.0
+tensorflow>=2.8.0  # Optional: for advanced ML models
+
+# Malware Detection and Analysis
+yara-python>=4.2.0
+pefile>=2021.9.3
+oletools>=0.60
+python-magic>=0.4.24
+ssdeep>=3.4
+
+# Memory Forensics
+volatility3>=2.0.0  # Advanced memory analysis
+rekall>=1.7.2  # Alternative memory analysis framework
+
+# Network Forensics and Analysis
+scapy>=2.4.5
+pyshark>=0.4.6
+dpkt>=1.9.8
+netaddr>=0.8.0
+
+# OSINT and Threat Intelligence
+requests>=2.28.0
+dnspython>=2.2.0
+python-whois>=0.7.0
+shodan>=1.28.0  # Requires API key
+censys>=2.1.0   # Requires API key
+virustotal-api>=1.1.11  # Requires API key
+
+# Cryptographic Analysis
+cryptography>=3.4.8
+pycryptodome>=3.15.0
+hashlib-compat>=1.0.0
+
+# Blockchain and Cryptocurrency
+bitcoin>=1.1.42
+ethereum>=2.3.2
+web3>=5.30.0
+
+# Mobile Device Forensics
+adb-shell>=0.4.0
+frida>=15.2.0  # Dynamic analysis
+androidemu>=0.1.0  # Android emulation
+
+# Cloud Forensics
+boto3>=1.24.0      # AWS
+azure-identity>=1.10.0  # Azure
+google-cloud-storage>=2.5.0  # GCP
+
+# Enterprise Integration
+flask>=2.2.0      # REST API
+celery>=5.2.0      # Task queue
+redis>=4.3.0       # Caching and queuing
+SQLAlchemy>=1.4.0  # Database ORM
+
+# Reporting and Visualization
+reportlab>=3.6.0   # PDF generation
+jinja2>=3.1.0      # Report templating
+plotly>=5.10.0     # Interactive visualizations
+seaborn>=0.11.0    # Statistical visualization
+
+# Development and Testing
+pytest>=7.1.0
+black>=22.0.0      # Code formatting
+flake8>=5.0.0      # Code linting
+mypy>=0.971        # Type checking
+
+# Optional Performance Enhancements
+numba>=0.56.0      # JIT compilation
+cython>=0.29.0     # C extensions
+uvloop>=0.16.0     # Fast event loop (Linux/macOS)
+
+# Database Backends (Optional)
+postgresql-adapter>=2.9.0
+mysql-connector-python>=8.0.0
+pymongo>=4.2.0     # MongoDB support
+
+# Container and Orchestration
+docker>=6.0.0      # Container analysis
+kubernetes>=24.2.0 # K8s integration
