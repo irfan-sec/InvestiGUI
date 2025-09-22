@@ -2,6 +2,7 @@
 Artifact Extraction Tab for InvestiGUI
 """
 
+from datetime import datetime
 from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QPushButton,
                              QGroupBox, QCheckBox, QLabel, QProgressBar,
                              QTextEdit, QMessageBox, QSplitter, QComboBox)

@@ -3,6 +3,7 @@ Main Window for InvestiGUI Digital Forensics Toolkit v2.0.0
 Enhanced with new capabilities and modern UI.
 """
 
+from datetime import datetime
 from PyQt5.QtWidgets import (QMainWindow, QTabWidget, QVBoxLayout, 
                              QWidget, QMenuBar, QStatusBar, QApplication,
                              QMessageBox, QToolBar, QAction, QProgressBar,
