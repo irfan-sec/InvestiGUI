@@ -1,6 +1,7 @@
 """
 Machine Learning and Anomaly Detection Module
 Advanced ML-based analysis for detecting suspicious patterns and anomalies.
+Enhanced with world-class AI capabilities for digital forensics.
 """
 
 import os
@@ -10,6 +11,7 @@ from typing import List, Dict, Tuple, Optional
 from collections import defaultdict, Counter
 import re
 import hashlib
+import concurrent.futures
 
 # Try to import numpy, fallback if not available
 try:
@@ -30,12 +32,32 @@ except ImportError:
             mean_val = sum(data) / len(data)
             variance = sum((x - mean_val) ** 2 for x in data) / len(data)
             return variance ** 0.5
+        
+        @staticmethod
+        def array(data):
+            return data
     
     np = _NumpyCompat()
 
+# Try to import advanced ML libraries
+try:
+    from sklearn.ensemble import IsolationForest, RandomForestClassifier
+    from sklearn.cluster import DBSCAN
+    from sklearn.preprocessing import StandardScaler
+    from sklearn.decomposition import PCA
+    SKLEARN_AVAILABLE = True
+except ImportError:
+    SKLEARN_AVAILABLE = False
 
-class AnomalyDetector:
-    """Machine learning-based anomaly detection for digital forensics."""
+try:
+    import networkx as nx
+    NETWORKX_AVAILABLE = True
+except ImportError:
+    NETWORKX_AVAILABLE = False
+
+
+class AdvancedAnomalyDetector:
+    """Next-generation machine learning-based anomaly detection for digital forensics."""
     
     def __init__(self):
         self.models_trained = False
@@ -46,6 +68,44 @@ class AnomalyDetector:
             'frequency': 0.25,
             'pattern': 0.25,
             'context': 0.2
+        }
+        self.ml_models = {}
+        self.threat_vectors = {}
+        
+        # Initialize advanced ML capabilities
+        self._initialize_ml_models()
+        self._load_threat_intelligence()
+        
+    def _initialize_ml_models(self):
+        """Initialize machine learning models for various analysis tasks."""
+        if SKLEARN_AVAILABLE:
+            self.ml_models = {
+                'isolation_forest': IsolationForest(contamination=0.1, random_state=42),
+                'random_forest': RandomForestClassifier(n_estimators=100, random_state=42),
+                'dbscan': DBSCAN(eps=0.3, min_samples=10),
+                'scaler': StandardScaler(),
+                'pca': PCA(n_components=0.95)
+            }
+        
+    def _load_threat_intelligence(self):
+        """Load threat intelligence for ML analysis."""
+        self.threat_vectors = {
+            'apt_indicators': [
+                'lateral_movement', 'privilege_escalation', 'persistence',
+                'defense_evasion', 'credential_access', 'discovery',
+                'collection', 'command_control', 'exfiltration'
+            ],
+            'malware_families': {
+                'ransomware': ['encryption', 'shadow_deletion', 'ransom_note'],
+                'banking_trojan': ['keylogging', 'form_grabbing', 'web_inject'],
+                'backdoor': ['remote_access', 'file_transfer', 'command_execution'],
+                'rootkit': ['kernel_modification', 'system_hooking', 'stealth']
+            },
+            'attack_patterns': {
+                'living_off_land': ['powershell', 'wmi', 'certutil', 'bitsadmin'],
+                'fileless_attack': ['memory_only', 'registry_persistence', 'wmi_event'],
+                'supply_chain': ['software_update', 'trusted_binary', 'dll_hijacking']
+            }
         }
         
     def analyze_timeline_anomalies(self, timeline_data: List[Dict]) -> Dict:
