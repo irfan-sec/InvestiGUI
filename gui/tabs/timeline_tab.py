@@ -2,6 +2,7 @@
 Timeline Viewer Tab for InvestiGUI
 """
 
+from datetime import datetime
 from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QPushButton,
                              QGroupBox, QLabel, QMessageBox, QSplitter,
                              QComboBox, QDateTimeEdit, QLineEdit, QCheckBox)

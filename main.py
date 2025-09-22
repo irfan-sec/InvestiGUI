@@ -479,9 +479,11 @@ def start_gui():
         return 1
     
     try:
+        # Set high DPI attributes before creating QApplication
+        QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
+        QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
+        
         app = QApplication(sys.argv)
-        app.setAttribute(Qt.AA_EnableHighDpiScaling, True)
-        app.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
         
         # Initialize plugin system
         print("🔧 Initializing plugin system...")

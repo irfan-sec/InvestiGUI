@@ -2,6 +2,7 @@
 Log Parser Tab for InvestiGUI
 """
 
+from datetime import datetime
 from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QPushButton,
                              QGroupBox, QCheckBox, QLabel, QMessageBox, 
                              QSplitter, QComboBox, QDateTimeEdit, QSpinBox)
